@@ -18,7 +18,7 @@ RUN ./gradlew build --no-daemon -x test
 
 
 # Runtime
-FROM eclipse-temurin:17-jre-alpine
+FROM eclipse-temurin:17-jre-alpine AS runtime
 WORKDIR /app
 
 RUN addgroup -g 1000 worker && \
